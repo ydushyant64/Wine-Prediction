@@ -41,13 +41,3 @@ To get a prediction, please provide values within the following ranges, which ar
 - **ML/Data:** Scikit-learn, Pandas, NumPy
 - **Frontend:** HTML, CSS
 
----
-
-## 🚀 How to Run Locally
-
-To run this project on your local machine, follow these steps.
-
-**1. Clone the repository:**
-```bash
-git clone [https://github.com/ydushyant64/Wine-Prediction.git](https://github.com/ydushyant64/Wine-Prediction.git)
-cd Wine-Prediction
