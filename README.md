@@ -10,7 +10,7 @@ You can try the live application here:
 
 **[https://wine-prediction-j7km.onrender.com/](https://wine-prediction-j7km.onrender.com/)**
 
-![Screenshot of the Wine Quality Prediction App](screenshot.PNG)
+![Screenshot of the Wine Quality Prediction App](sreenshot.PNG)
 
 ---
 
