@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+        }
+
+        form input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 12px;
+            border-radius: 5px;
+            border: 1px solid #555;
+            background: #333;
+            color: white;
+            font-size: 16px;
+        }
+        
+        form input::placeholder {
+            color: #aaa;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745; /* Green Button */
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838; /* Darker Green on Hover */
+        }
+
+        .prediction-text {
+            margin-top: 25px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #20c997; /* A bright color for the result */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Wine Quality Prediction</h1>
+
+        <form action="{{ url_for('predict') }}" method="post">
+            <input type="text" name="fixed acidity" placeholder="Fixed Acidity" required="required" />
+            <input type="text" name="volatile acidity" placeholder="Volatile Acidity" required="required" />
+            <input type="text" name="citric acid" placeholder="Citric Acid" required="required" />
+            <input type="text" name="residual sugar" placeholder="Residual Sugar" required="required" />
+            <input type="text" name="chlorides" placeholder="Chlorides" required="required" />
+            <input type="text" name="free sulfur dioxide" placeholder="Free Sulfur Dioxide" required="required" />
+            <input type="text" name="total sulfur dioxide" placeholder="Total Sulfur Dioxide" required="required" />
+            <input type="text" name="density" placeholder="Density" required="required" />
+            <input type="text" name="pH" placeholder="pH" required="required" />
+            <input type="text" name="sulphates" placeholder="Sulphates" required="required" />
+            <input type="text" name="alcohol" placeholder="Alcohol" required="required" />
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction_text %}
+            <h3 class="prediction-text">{{ prediction_text }}</h3>
+        {% endif %}
+    </div>
+
+</body>
+</html>
