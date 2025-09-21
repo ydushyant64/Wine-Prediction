@@ -6,6 +6,11 @@ A simple machine learning web application that predicts the quality of wine on a
 
 ## ✨ Live Demo
 
+You can try the live application here:
+
+**[https://wine-prediction-j7km.onrender.com/](https://wine-prediction-j7km.onrender.com/)**
+
+
 ![Screenshot of the Wine Quality Prediction App](sreenshot.PNG)
 
 ## 📊 Input Parameter Ranges
