@@ -4,7 +4,7 @@ A simple machine learning web application that predicts the quality of wine on a
 
 ## ✨ Live Demo
 
-![Screenshot of the Wine Quality Prediction App](screeenshot.png)
+![Screenshot of the Wine Quality Prediction App](screeenshot.PNG)
 
 ## 🛠️ Tech Stack
 
