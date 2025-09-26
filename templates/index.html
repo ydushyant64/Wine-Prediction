@@ -12,12 +12,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             padding: 20px;
             box-sizing: border-box;
         }
-
         .container {
             background: rgba(0, 0, 0, 0.4);
             padding: 30px 40px;
@@ -25,34 +24,35 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             text-align: center;
             width: 100%;
-            max-width: 400px;
+            max-width: 500px; /* Increased width for more space */
         }
-
-        h1 {
-            margin-bottom: 25px;
-        }
-
-        form input {
-            width: calc(100% - 20px);
-            padding: 10px;
+        h1 { margin-bottom: 25px; }
+        .input-group {
+            display: flex;
+            align-items: center;
             margin-bottom: 12px;
+        }
+        .input-group input {
+            flex: 1; /* Input field takes available space */
+            padding: 10px;
             border-radius: 5px;
             border: 1px solid #555;
             background: #333;
             color: white;
             font-size: 16px;
         }
-        
-        form input::placeholder {
-            color: #aaa;
+        .input-group .range-label {
+            margin-left: 10px;
+            font-size: 14px;
+            color: #ccc;
+            white-space: nowrap; /* Prevents range text from wrapping */
         }
-
         button {
             width: 100%;
             padding: 12px;
             border: none;
             border-radius: 5px;
-            background-color: #28a745; /* Green Button */
+            background-color: #28a745;
             color: white;
             font-size: 18px;
             font-weight: bold;
@@ -60,36 +60,64 @@
             margin-top: 10px;
             transition: background-color 0.3s ease;
         }
-
-        button:hover {
-            background-color: #218838; /* Darker Green on Hover */
-        }
-
+        button:hover { background-color: #218838; }
         .prediction-text {
             margin-top: 25px;
             font-size: 22px;
             font-weight: bold;
-            color: #20c997; /* A bright color for the result */
+            color: #20c997;
         }
     </style>
 </head>
 <body>
-
     <div class="container">
         <h1>Wine Quality Prediction</h1>
 
         <form action="{{ url_for('predict') }}" method="post">
-            <input type="text" name="fixed acidity" placeholder="Fixed Acidity" required="required" />
-            <input type="text" name="volatile acidity" placeholder="Volatile Acidity" required="required" />
-            <input type="text" name="citric acid" placeholder="Citric Acid" required="required" />
-            <input type="text" name="residual sugar" placeholder="Residual Sugar" required="required" />
-            <input type="text" name="chlorides" placeholder="Chlorides" required="required" />
-            <input type="text" name="free sulfur dioxide" placeholder="Free Sulfur Dioxide" required="required" />
-            <input type="text" name="total sulfur dioxide" placeholder="Total Sulfur Dioxide" required="required" />
-            <input type="text" name="density" placeholder="Density" required="required" />
-            <input type="text" name="pH" placeholder="pH" required="required" />
-            <input type="text" name="sulphates" placeholder="Sulphates" required="required" />
-            <input type="text" name="alcohol" placeholder="Alcohol" required="required" />
+            <div class="input-group">
+                <input type="text" name="fixed acidity" placeholder="Fixed Acidity" required="required" />
+                <span class="range-label">(4.6 - 15.9)</span>
+            </div>
+            <div class="input-group">
+                <input type="text" name="volatile acidity" placeholder="Volatile Acidity" required="required" />
+                <span class="range-label">(0.12 - 1.58)</span>
+            </div>
+            <div class="input-group">
+                <input type="text" name="citric acid" placeholder="Citric Acid" required="required" />
+                <span class="range-label">(0.0 - 1.0)</span>
+            </div>
+            <div class="input-group">
+                <input type="text" name="residual sugar" placeholder="Residual Sugar" required="required" />
+                <span class="range-label">(0.9 - 15.5)</span>
+            </div>
+            <div class="input-group">
+                <input type="text" name="chlorides" placeholder="Chlorides" required="required" />
+                <span class="range-label">(0.012 - 0.611)</span>
+            </div>
+            <div class="input-group">
+                <input type="text" name="free sulfur dioxide" placeholder="Free Sulfur Dioxide" required="required" />
+                <span class="range-label">(1.0 - 72.0)</span>
+            </div>
+            <div class="input-group">
+                <input type="text" name="total sulfur dioxide" placeholder="Total Sulfur Dioxide" required="required" />
+                <span class="range-label">(6.0 - 289.0)</span>
+            </div>
+            <div class="input-group">
+                <input type="text" name="density" placeholder="Density" required="required" />
+                <span class="range-label">(0.99 - 1.003)</span>
+            </div>
+            <div class="input-group">
+                <input type="text" name="pH" placeholder="pH" required="required" />
+                <span class="range-label">(2.74 - 4.01)</span>
+            </div>
+            <div class="input-group">
+                <input type="text" name="sulphates" placeholder="Sulphates" required="required" />
+                <span class="range-label">(0.33 - 2.0)</span>
+            </div>
+            <div class="input-group">
+                <input type="text" name="alcohol" placeholder="Alcohol" required="required" />
+                <span class="range-label">(8.4 - 14.9)</span>
+            </div>
 
             <button type="submit">Predict</button>
         </form>
