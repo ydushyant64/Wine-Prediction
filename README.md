@@ -8,9 +8,7 @@ Have you ever wondered what makes a great wine? This project dives into that que
 
 Here’s a snapshot of the application. Simply enter the wine's chemical details to see what the model thinks of its quality!
 
-
-
-*(To make this image appear, just upload a screenshot of your webpage to the repository and name it `screenshot.PNG`)*
+![Application Screenshot](screenshot.PNG)
 
 ---
 
