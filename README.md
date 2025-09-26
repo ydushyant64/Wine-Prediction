@@ -4,6 +4,14 @@ Have you ever wondered what makes a great wine? This project dives into that que
 
 ---
 
+## ✨ Live Demo
+
+You can try the live application here:
+
+**[https://huggingface.co/spaces/ydushyant64/Wine_Quality_Prediction](https://huggingface.co/spaces/ydushyant64/Wine_Quality_Prediction)**
+
+---
+
 ## A Quick Look
 
 Here’s a snapshot of the application. Simply enter the wine's chemical details to see what the model thinks of its quality!
