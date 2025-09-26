@@ -4,7 +4,7 @@ Have you ever wondered what makes a great wine? This project dives into that que
 
 ---
 
-## ✨ Live Demo
+## Live Demo
 
 You can try the live application here:
 
