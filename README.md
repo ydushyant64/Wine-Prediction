@@ -8,7 +8,7 @@ A simple machine learning web application that predicts the quality of wine on a
 
 You can try the live application here:
 
-**[https://wine-prediction-j7km.onrender.com/](https://huggingface.co/spaces/ydushyant64/Wine_Quality_Prediction)**
+**[https://huggingface.co/spaces/ydushyant64/Wine_Quality_Prediction](https://huggingface.co/spaces/ydushyant64/Wine_Quality_Prediction)**
 
 
 ![Screenshot of the Wine Quality Prediction App](sreenshot.PNG)
