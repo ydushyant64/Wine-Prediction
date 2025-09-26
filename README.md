@@ -1,10 +1,10 @@
-# 🍷 AI-Powered Wine Quality Predictor
+# AI-Powered Wine Quality Predictor
 
 Have you ever wondered what makes a great wine? This project dives into that question by using machine learning to predict the quality of red wine based on its chemical properties. I've built a simple and elegant web application that lets you input a wine's stats and get an instant quality score.
 
 ---
 
-## ✨ A Quick Look
+## A Quick Look
 
 Here’s a snapshot of the application. Simply enter the wine's chemical details to see what the model thinks of its quality!
 
@@ -36,7 +36,7 @@ After identifying the best hyperparameters, the final Random Forest model was tr
 
 ---
 
-## 📊 Model Performance
+## Model Performance
 
 After extensive hyperparameter tuning, here are the final accuracy scores for the models on the test set:
 
@@ -47,7 +47,7 @@ After extensive hyperparameter tuning, here are the final accuracy scores for th
 
 ---
 
-## 🧪 Input Parameter Ranges
+## Input Parameter Ranges
 
 To get the most accurate prediction, it's best to use values within the ranges the model was trained on. Here are the typical values from the dataset:
 
